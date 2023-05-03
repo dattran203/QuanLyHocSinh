@@ -49,7 +49,7 @@ public class GUI_Dangnhap extends JFrame {
 	 * Create the frame.
 	 */
 	public GUI_Dangnhap() {
-		setIconImage(Toolkit.getDefaultToolkit().getImage("E:\\BaiTapLon\\BTL_Java\\th.jfif"));
+		setIconImage(Toolkit.getDefaultToolkit().getImage("E:\\BaiTapLon\\BTL_Java\\QUANLY\\QLHS\\src\\image\\th.jfif"));
 		setAlwaysOnTop(true);
 		setResizable(false);
 		setBackground(new Color(0, 255, 0));
@@ -80,6 +80,7 @@ public class GUI_Dangnhap extends JFrame {
 		contentPane.add(txt_user);
 		txt_user.setColumns(10);
 		
+		final JButton btn_dongy1 = new JButton("Ðồng ý");
 		JButton btn_dangnhap = new JButton("Đăng nhập");
 		btn_dangnhap.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -97,7 +98,7 @@ public class GUI_Dangnhap extends JFrame {
 						return;
 					}
 				}
-				JOptionPane.showConfirmDialog(null,"Tài khoản hoặc mật khẩu sai, xin vui lòng nhập lại","Thông Báo", JOptionPane.OK_CANCEL_OPTION);
+				JOptionPane.showMessageDialog(btn_dongy1,"Tài khoản hoặc mật khẩu sai");
 				txt_user.setText(null);
 				txt_pass.setText(null);
 			}
@@ -120,7 +121,7 @@ public class GUI_Dangnhap extends JFrame {
 		
 		JLabel lblNewLabel_1 = new JLabel("");
 		lblNewLabel_1.setBackground(new Color(240, 240, 240));
-		lblNewLabel_1.setIcon(new ImageIcon("E:\\BaiTapLon\\BTL_Java\\bg.jfif"));
+		lblNewLabel_1.setIcon(new ImageIcon("E:\\BaiTapLon\\BTL_Java\\QUANLY\\QLHS\\src\\image\\bg.jfif"));
 		lblNewLabel_1.setBounds(0, 0, 424, 199);
 		contentPane.add(lblNewLabel_1);
 	}

@@ -30,6 +30,7 @@ import javax.swing.JTable;
 import javax.swing.ImageIcon;
 import java.util.Comparator;
 import javax.swing.DefaultComboBoxModel;
+import java.awt.Toolkit;
 
 public class GUI_QUANLY extends JFrame {
 
@@ -76,6 +77,7 @@ public class GUI_QUANLY extends JFrame {
 	 * Create the frame.
 	 */
 	public GUI_QUANLY() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage("E:\\BaiTapLon\\BTL_Java\\th.jfif"));
 		setResizable(false);
 		setTitle("CHƯƠNG TRÌNH QUẢN LÝ ĐIỂM");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -219,7 +221,7 @@ public class GUI_QUANLY extends JFrame {
 		btn_clear.setBackground(Color.YELLOW);
 		panel.add(btn_clear);
 		
-		final JButton btn_dongy1 = new JButton("Ðồng ý");
+		final JButton btn_dongy2 = new JButton("Ðồng ý");
 		JButton btn_sua = new JButton("Sửa");
 		btn_sua.setBounds(241, 392, 100, 41);
 		btn_sua.addActionListener(new ActionListener() {
@@ -229,7 +231,7 @@ public class GUI_QUANLY extends JFrame {
 						"Thông báo", kq.YES_NO_OPTION);
 				if (input == 0) {
 					UpdategetlistStudent();
-					JOptionPane.showMessageDialog(btn_dongy1,"Bạn đã sửa thành công");
+					JOptionPane.showMessageDialog(btn_dongy2,"Bạn đã sửa thành công");
 				}
 				
 			}
@@ -286,7 +288,7 @@ public class GUI_QUANLY extends JFrame {
 						return;
 					}
 				}
-				if(ID.equals("")||Name.equals("")||ClassID.equals("")||HanhKiem.equals("")||Khoi.equals("null"))
+				if(ID.equals("")||Name.equals("")||ClassID.equals("")||HanhKiem.equals(""))
 					JOptionPane.showConfirmDialog(null, "Vui lòng điền đầy đủ thông tin","Thông báo", JOptionPane.OK_CANCEL_OPTION);
 				
 				else {
@@ -296,6 +298,7 @@ public class GUI_QUANLY extends JFrame {
 					text_mhs.setText("");
 					text_ten.setText("");
 					text_lop.setText("");
+					text_diem.setText("");
 					text_hk.setText("");
 					text_xeploai.setText("");
 					
